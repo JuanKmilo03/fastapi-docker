@@ -5,10 +5,9 @@ import psycopg2
 app = FastAPI()
 DATA_FILE = "/data/notas.txt"
 
-# Conexión a PostgreSQL
 def get_connection():
     return psycopg2.connect(
-        host=os.getenv("DB_HOST"),
+        host=os.getenv("DB_HOS.\venv\Scripts\activateT"),
         database=os.getenv("DB_NAME"),
         user=os.getenv("DB_USER"), 
         password=os.getenv("DB_PASS"), 
