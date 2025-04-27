@@ -7,7 +7,7 @@ DATA_FILE = "/data/notas.txt"
 
 def get_connection():
     return psycopg2.connect(
-        host=os.getenv("DB_HOS.\venv\Scripts\activateT"),
+        host=os.getenv("DB_HOS"),
         database=os.getenv("DB_NAME"),
         user=os.getenv("DB_USER"), 
         password=os.getenv("DB_PASS"), 
