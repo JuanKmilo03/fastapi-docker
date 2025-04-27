@@ -66,16 +66,3 @@ def obtener_notas_db():
 def obtener_autor():
     autor = os.getenv("AUTOR", "Desconocido")
     return {"autor": autor}
-
-@app.delete("/borrar-notas")
-def borrar_notas():
-    try:
-        conn = get_connection()
-        cur = conn.cursor()
-        cur.execute("DELETE FROM notas") 
-        conn.commit()
-        cur.close()
-        conn.close()
-        return {"mensaje": "Todas las notas han sido eliminadas"}
-    except Exception as e:
-        return {"error": str(e)}
